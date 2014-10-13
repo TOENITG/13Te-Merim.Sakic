@@ -7,24 +7,22 @@ public class Inlämningsuppgift2 {
 
     
     public static void main(String[] args) {
-        // TODO code application logic here
         
-        String forsta;
-        forsta= JOptionPane.showInputDialog("Skriv in ett ord!");
+        //*I String kapitlet så ber jag användaren skriva in 5 ord*//
+       
+        String forsta= JOptionPane.showInputDialog("Skriv in ett ord!");
         
-        String andra;
-        andra =JOptionPane.showInputDialog("Skriv in ett till");
+        String andra =JOptionPane.showInputDialog( forsta );
         
-        String tredje;
-        tredje = JOptionPane.showInputDialog("Ännu ett till");
+        String tredje = JOptionPane.showInputDialog( forsta + " " + andra );
+       
+        String fjerde = JOptionPane.showInputDialog( forsta + " " + andra + " " + tredje);
         
-        String fjerde;
-        fjerde = JOptionPane.showInputDialog("Ett fjärde ord");
+        String femte = JOptionPane.showInputDialog( forsta + " " + andra + " " + tredje + " " + fjerde );
         
-        String femte;
-        femte = JOptionPane.showInputDialog("När du kommit såhär långt, skriv ett sista");
+        //*Här skriver jag ut de användarvalda orden*//
         
-        JOptionPane.showMessageDialog(null, forsta + andra + tredje + fjerde + femte);
+        JOptionPane.showMessageDialog(null, forsta + " " + andra + " " + tredje + " " + fjerde + " " + femte);
         
     }
     

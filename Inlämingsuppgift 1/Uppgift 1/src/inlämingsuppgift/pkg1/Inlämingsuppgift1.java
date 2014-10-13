@@ -1,33 +1,38 @@
 package inlämingsuppgift.pkg1;
-
-import java.util.Scanner;
 import javax.swing.JOptionPane;
 public class Inlämingsuppgift1 {
 
     public static void main(String[] args) {
-        //*TODO code here*//
+        //*Här tar jag reda på information om användaren*//
         
-        Scanner user_input = new Scanner (System.in);
+        String first_name = JOptionPane.showInputDialog("Förnamn");
         
-        String first_name;
-        first_name = JOptionPane.showInputDialog("Förnamn");
         
-        String last_name;
-        last_name = JOptionPane.showInputDialog("Efternamn");
+        String last_name = JOptionPane.showInputDialog("Efternamn");
         
-        String birthday;
-        birthday = JOptionPane.showInputDialog("Skriv in ditt födelsedatum ÅÅMMDD");
         
-        String city;
-        city = JOptionPane.showInputDialog("I vilken stad bor du?");
+        String birthday = JOptionPane.showInputDialog("Skriv in ditt födelsedatum ÅÅMMDD", "xxxxxx");
         
-        String Adress;
-        Adress = JOptionPane.showInputDialog("Skriv in din adress!");
+        
+        String city = JOptionPane.showInputDialog("I vilken stad bor du?");
+        
+        
+        String Adress = JOptionPane.showInputDialog("Skriv in din adress!");
     
-        String datum;
-        datum = birthday.substring(2, 6);
         
-        JOptionPane.showMessageDialog(null, "Hej " + first_name + " " + last_name + ", den " + datum + " kommer vi till " + Adress + " i " + city + " och gratulerar dig på din födelsedag!");
+        //*Här tar jag ut användarens födelsedatum i två steg, "dag" och månad*//
+        
+        
+        String monad;
+        monad = birthday.substring(2, 4);
+        String dag;
+        dag = birthday.substring(4, 6);
+        
+        //*Här under skriver jag vad som ska skrivas ut*//
+        
+        JOptionPane.showMessageDialog(null, "Hej " + first_name + " " + last_name + ", den " + dag + "/" + monad + " kommer vi till " + Adress + " i " + city + " och gratulerar dig på din födelsedag!");
+        
+        //*Sedan avslutas programmet*//
         System.exit(0);
     }
     
